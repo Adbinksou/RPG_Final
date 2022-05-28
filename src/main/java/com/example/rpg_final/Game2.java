@@ -1,6 +1,10 @@
 package com.example.rpg_final;
 
 
+
+
+import org.junit.Test;
+
 import java.util.Random;
 import java.util.Scanner;
 
@@ -12,6 +16,7 @@ public class Game2 {
     public static void main(String[] arg) {
         Jeu();
     }
+
 
     public static void Jeu() {
         System.out.println("================RPG_3000================");
@@ -320,4 +325,9 @@ public class Game2 {
             }
         }
     }
+
+
+
+
 }
+
