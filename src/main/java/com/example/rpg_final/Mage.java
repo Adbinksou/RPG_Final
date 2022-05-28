@@ -1,7 +1,9 @@
 package com.example.rpg_final;
 
-public class Mage extends Hero {
-    public Mage(int lifePoints, int weaponDamage, int armor) {
-        super(lifePoints, weaponDamage, armor);
+public class Mage extends SpellCaster {
+
+
+    public Mage(int lifePoints, int weaponDamage, int armor, int manaPoint, int costMana) {
+        super(lifePoints, weaponDamage, armor, manaPoint, costMana);
     }
 }

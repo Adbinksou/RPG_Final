@@ -43,8 +43,8 @@ public class Game {
 
         Warrior warrior = new Warrior(100, 20, 50);
         Hunter hunter = new Hunter(60, 25, 6, 5);
-        Healer healer = new Healer(80, 5, 4);
-        Mage mage = new Mage(75, 25, 0);
+        Healer healer = new Healer(80, 5, 4,20,5);
+        Mage mage = new Mage(75, 25, 0,20,5);
         heroList.add(warrior);
         heroList.add(hunter);
         heroList.add(healer);
