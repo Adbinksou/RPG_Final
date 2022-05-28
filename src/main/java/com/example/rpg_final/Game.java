@@ -10,13 +10,14 @@ import java.util.Iterator;
 import java.util.List;
 import java.util.Scanner;
 
+import static com.example.rpg_final.Game2.scanner;
+
 public class Game {
     static int nbrHero;
     static List<Hero> heroList = new ArrayList();
     static List<Enemy> enemyList = new ArrayList();
 
-    public Game() {
-    }
+
 
     public static void main(String[] args) {
         generateHero();
@@ -52,8 +53,9 @@ public class Game {
 
     public static void generateEnemy() {
         for(int i = 1; i <= nbrHero; ++i) {
-            Enemy enemy = new Enemy(100, 15, "zombie");
+            Enemy enemy = new Enemy(100, 15);
             enemyList.add(enemy);
+
         }
 
     }
@@ -71,20 +73,32 @@ public class Game {
 
                 while(var2.hasNext()) {
                     Enemy enemy = (Enemy)var2.next();
-                    System.out.println("\tEnemy's HP:" + enemy.getLifePoints());
-                    System.out.println("\n\tWhat would you like to do ?");
-                    System.out.println("\t(1) Attack");
-                    System.out.println("\t(2) Defend (la meilleure defence c'est l'attaque)");
-                    System.out.println("\t(3) Run away");
+                    System.out.println("\tPoints de vie enemie :"+ enemy.getLifePoints());
+                    System.out.println("\n\tQue voulez vous faire ?");
+                    System.out.println("\t(1) Attaquer");
+                    System.out.println("\t(2) Defendre (la meilleure defense c'est l'attaque)");
+                    System.out.println("\t(3) Utiliser consommable");
                     Scanner inputReader = new Scanner(System.in);
-                    String input = inputReader.nextLine();
-                    if (input.equals("1")) {
-                        hero.setLifePoints(hero.getLifePoints() - enemy.enemyDamage);
-                        enemy.setLifePoints(enemy.getLifePoints() - hero.weaponDamage);
-                        System.out.println("\tHero's HP:" + hero.getLifePoints());
-                    } else if (!input.equals("2") && !input.equals("3")) {
-                        System.out.println("error");
+                    int input = scanner.nextInt();
+                    switch (input){
+                        case 1:
+                            hero.setLifePoints(hero.getLifePoints() - enemy.getEnemyDamage());
+                            enemy.setLifePoints(enemy.getLifePoints() - hero.getWeaponDamage());
+                            System.out.println("\tHero's HP:" + hero.getLifePoints());
+                            break;
+                        case 2:
+                            System.out.println("r");
+                            break;
+                        case 3:
+
+
+
+
+                            break;
+
                     }
+
+
                 }
             }
         }
@@ -104,5 +118,11 @@ public class Game {
         } while(hero.getLifePoints() <= 0);
 
         return true;
+    }
+
+    public static void potions(){
+
+
+
     }
 }

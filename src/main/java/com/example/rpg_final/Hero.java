@@ -36,6 +36,15 @@ public class Hero {
         this.weaponDamage = weaponDamage;
     }
 
+
+    public int getArmor() {
+        return armor;
+    }
+
+    public void setArmor(int armor) {
+        this.armor = armor;
+    }
+
     public void attack() {
     }
 

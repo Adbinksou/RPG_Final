@@ -8,12 +8,12 @@ package com.example.rpg_final;
 public class Enemy {
     int lifePoints;
     int enemyDamage;
-    String name;
 
-    public Enemy(int lifePoints, int enemyDamage, String name) {
+
+    public Enemy(int lifePoints, int enemyDamage) {
         this.lifePoints = lifePoints;
         this.enemyDamage = enemyDamage;
-        this.name = name;
+
     }
 
     public int getLifePoints() {
@@ -32,11 +32,5 @@ public class Enemy {
         this.enemyDamage = enemyDamage;
     }
 
-    public String getName() {
-        return this.name;
-    }
 
-    public void setName(String name) {
-        this.name = name;
-    }
 }
